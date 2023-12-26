@@ -12,11 +12,11 @@ class Counter extends StatelessWidget {
         title: const Text('Counter'),
         backgroundColor: const Color.fromARGB(255, 229, 161, 140),
       ),
-      body: GetX<MyCounter>(
+      body: GetBuilder<MyCounter>(
         builder: (myCounter) => Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('counter ${myCounter.count.value}'),
+            Text('counter ${myCounter.count}'),
             const SizedBox(
               height: 25,
             ),
@@ -27,20 +27,11 @@ class Counter extends StatelessWidget {
                   onPressed: () {
                     myCounter.increment();
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 229, 161, 140),
+                  ),
                   child: const Text('increment count'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 229, 161, 140),
-                  ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    myCounter.decrement();
-                  },
-                  child: const Text('decrement count'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 229, 161, 140),
-                  ),
-                )
               ],
             ),
           ],

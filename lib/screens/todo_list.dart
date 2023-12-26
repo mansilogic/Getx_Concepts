@@ -10,7 +10,7 @@ class ToDoList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo List'),
+        title: Text('To-do List'),
         backgroundColor: const Color.fromARGB(255, 229, 161, 140),
       ),
       body: Column(

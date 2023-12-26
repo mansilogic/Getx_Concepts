@@ -1,0 +1,50 @@
+i don't want to use 2nd map...// ignore_for_file: avoid_print
+
+import 'package:get/get.dart';
+
+class RegistrationController extends GetxController {
+  List<Map<String, String>> registeredUsers = [];
+  Map<String, String> formData = {};
+
+  void addFormData(String field, String value) {
+    formData.addAll({field: value});
+
+    print(">>>>>>>>>>>>>>>>>>>>>>>> Form data: $formData");
+  }
+
+  void submitForm() {
+    print(">>>>>>>>>>>>>>>>>>>>> $registeredUsers");
+
+    // Map<String, String> userData = Map.from(formData);
+
+    registeredUsers.add(formData);
+    formData.clear();
+
+    print("====>>>>> $registeredUsers");
+
+    Get.toNamed('/success');
+  }
+}
+
+
+class RegistrationController extends GetxController {
+  List<Map<String, String>> registeredUsers = [];
+  Map<String, String> formData = {};
+
+  void addFormData(String field, String value) {
+    formData.addAll({field: value});
+    print(">>>>>>>>>>>>>>>>>>>>>>>> Form data: $formData");
+  }
+
+  void submitForm() {
+    print(">>>>>>>>>>>>>>>>>>>>> $registeredUsers");
+
+    registeredUsers.add(Map.from(formData)); // Add a new instance of formData
+
+    formData.clear(); // Clear the formData for the next user
+
+    print("====>>>>> $registeredUsers");
+
+    Get.toNamed('/success');
+  }
+}

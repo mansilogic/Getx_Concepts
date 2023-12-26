@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:getxpractice/ui/languages.dart';
+import 'package:getxpractice/screens/languages.dart';
 
 class Translation extends StatelessWidget {
   const Translation({super.key});
