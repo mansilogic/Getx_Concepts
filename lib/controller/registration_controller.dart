@@ -14,9 +14,9 @@ class RegistrationController extends GetxController {
 
   void submitForm() {
     registeredUsers.add(Map.from(formData));
-    formData.clear();
-    print("========>$formData");
-    print("========>$registeredUsers");
+    // formData.clear();
+    print("========>formdata=== $formData");
+    print("========>registeredusers== $registeredUsers");
 
     Get.toNamed('/success');
   }

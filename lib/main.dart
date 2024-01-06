@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -45,15 +47,15 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/Posts',
             page: () => Posts(),
-            transition: Transition.rightToLeft),
+            transition: Transition.leftToRight),
         GetPage(
             name: '/Form',
             page: () => RegistrationForm(),
-            transition: Transition.rightToLeft),
+            transition: Transition.leftToRight),
         GetPage(
             name: '/success',
-            page: () => SuccessPage(),
-            transition: Transition.rightToLeft)
+            page: () => const SuccessPage(),
+            transition: Transition.leftToRight)
       ],
     );
   }
